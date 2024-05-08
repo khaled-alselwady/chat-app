@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppDesktopUI", "ChatAppDesktopUI\ChatAppDesktopUI.csproj", "{5836A127-1B58-4740-B590-FEB6061DE4D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppDesktopUI", "ChatAppDesktopUI.csproj", "{5836A127-1B58-4740-B590-FEB6061DE4D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppDataAccess", "ChatAppDataAccess\ChatAppDataAccess.csproj", "{94462BF0-9297-4524-BD70-9B9FE494B953}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppDataAccess", "..\ChatAppDataAccess\ChatAppDataAccess.csproj", "{94462BF0-9297-4524-BD70-9B9FE494B953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppBusiness", "ChatAppBusiness\ChatAppBusiness.csproj", "{C8E45EC1-D5AB-42D0-A762-6F465AC6C91F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAppBusiness", "..\ChatAppBusiness\ChatAppBusiness.csproj", "{C8E45EC1-D5AB-42D0-A762-6F465AC6C91F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

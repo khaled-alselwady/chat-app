@@ -71,8 +71,8 @@ return false;
 public static clsBlockedContact Find(int? blockedContactID)
 {
 int blockerID = -1;
-int blockedID = -1;
-DateTime blockedDataTime = DateTime.Now;
+    int blockedID = -1;
+    DateTime blockedDataTime = DateTime.Now;
 
 bool isFound = clsBlockedContactData.GetInfoByID(blockedContactID, ref blockerID, ref blockedID, ref blockedDataTime);
 

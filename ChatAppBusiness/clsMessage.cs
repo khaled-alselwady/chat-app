@@ -21,6 +21,7 @@ namespace ChatAppBusiness
             MessageID = null;
             SenderID = -1;
             RecipientID = -1;
+            MessageContent = string.Empty;
             MessageDate = DateTime.Now;
             Status = 0;
 

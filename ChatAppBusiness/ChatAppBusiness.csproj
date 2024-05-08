@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsBlockedContactData.cs" />
-    <Compile Include="clsMessageData.cs" />
-    <Compile Include="clsUserContactData.cs" />
-    <Compile Include="clsUserData.cs" />
+    <Compile Include="clsBlockedContact.cs" />
+    <Compile Include="clsMessage.cs" />
+    <Compile Include="clsUser.cs" />
+    <Compile Include="clsUserContact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

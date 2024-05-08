@@ -68,7 +68,7 @@ return false;
 public static clsUserContact Find(int? userContactID)
 {
 int userID = -1;
-int contactID = -1;
+    int contactID = -1;
 
 bool isFound = clsUserContactData.GetInfoByID(userContactID, ref userID, ref contactID);
 

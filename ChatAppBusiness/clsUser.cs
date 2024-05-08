@@ -74,7 +74,7 @@ return false;
 public static clsUser Find(int? userID)
 {
 string username = string.Empty;
-string password = string.Empty;
+    string password = string.Empty;
 string bio = null;
 string imagePath = null;
 
@@ -86,7 +86,7 @@ return (isFound) ? (new clsUser(userID, username, password, bio, imagePath)) : n
 public static clsUser Find(string username)
 {
 int? userID = null;
-string password = string.Empty;
+    string password = string.Empty;
 string bio = null;
 string imagePath = null;
 
