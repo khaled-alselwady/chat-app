@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatAppDesktopUI.Login;
+using System;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI
@@ -13,7 +14,7 @@ namespace ChatAppDesktopUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Application.Run(new frmLoginScreen());
         }
     }
 }
