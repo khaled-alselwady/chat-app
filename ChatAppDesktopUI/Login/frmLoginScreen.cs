@@ -1,5 +1,6 @@
 ﻿using ChatAppBusiness;
 using ChatAppDesktopUI.GlobalClasses;
+using ChatAppDesktopUI.MainMenu;
 using Guna.UI2.WinForms;
 using System;
 using System.ComponentModel;
@@ -56,9 +57,9 @@ namespace ChatAppDesktopUI.Login
             }
 
             clsGlobal.CurrentUser = User;
-            //this.Hide();
-            //frmMainMenu OpenMainMenu = new frmMainMenu(this);
-            //OpenMainMenu.ShowDialog();
+            this.Hide();
+            frmMainMenu OpenMainMenu = new frmMainMenu(this);
+            OpenMainMenu.ShowDialog();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
