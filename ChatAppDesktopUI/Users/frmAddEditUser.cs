@@ -320,7 +320,11 @@ namespace ChatAppDesktopUI.Users
 
         private void llChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            clsStandardMessages.ShowNotImplementedFeatures();
+            frmChangePassword changePassword = new frmChangePassword(_userID);
+            changePassword.ShowDialog();
+
+            // Refresh
+            frmAddEditUser_Load(null, null);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
