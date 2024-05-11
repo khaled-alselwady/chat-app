@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="Resources\chat-background2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-image.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

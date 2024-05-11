@@ -58,7 +58,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(159)))), ((int)(((byte)(218)))));
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.guna2CustomGradientPanel1.BorderRadius = 10;
             this.guna2CustomGradientPanel1.BorderThickness = 2;
             this.guna2CustomGradientPanel1.Controls.Add(this.chkRememberMe);
@@ -97,7 +97,7 @@
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(159)))), ((int)(((byte)(218)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(77, 239);
@@ -180,7 +180,7 @@
             // 
             this.llOpenMyProfile.AutoSize = true;
             this.llOpenMyProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llOpenMyProfile.LinkColor = System.Drawing.Color.MediumBlue;
+            this.llOpenMyProfile.LinkColor = System.Drawing.SystemColors.ActiveBorder;
             this.llOpenMyProfile.Location = new System.Drawing.Point(143, 618);
             this.llOpenMyProfile.Name = "llOpenMyProfile";
             this.llOpenMyProfile.Size = new System.Drawing.Size(121, 17);
@@ -205,13 +205,14 @@
             // 
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 301);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(9, 319);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(332, 131);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(339, 147);
             this.guna2HtmlLabel1.TabIndex = 2;
-            this.guna2HtmlLabel1.Text = "Start your engines and let the adventure begin.";
+            this.guna2HtmlLabel1.Text = "Education is the passport to the future, for tomorrow belongs to those who prepar" +
+    "e for it today.";
             // 
             // label1
             // 
@@ -260,7 +261,7 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(159)))), ((int)(((byte)(218)))));
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.guna2GradientPanel1.Controls.Add(this.llOpenMyProfile);
             this.guna2GradientPanel1.Controls.Add(this.label5);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
@@ -300,10 +301,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ChatAppDesktopUI.Properties.Resources.chat;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 33);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ChatAppDesktopUI.Properties.Resources.login_image;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(309, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
