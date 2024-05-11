@@ -85,7 +85,11 @@ namespace ChatAppDesktopUI.Users.UserControls
 
         private void llEditUserInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            clsStandardMessages.ShowNotImplementedFeatures();
+            frmAddEditUser editUser = new frmAddEditUser(_userID);
+            editUser.ShowDialog();
+
+            // Refresh
+            LoadUserInfo(_userID);
         }
     }
 }
