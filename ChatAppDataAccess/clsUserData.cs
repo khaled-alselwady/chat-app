@@ -228,5 +228,34 @@ namespace ChatAppDataAccess
 
         public static DataTable All()
         => clsDataAccessHelper.All("SP_GetAllUsers");
+
+        public static bool ChangePassword(int? UserID, string NewPassword)
+        {
+            int RowAffected = 0;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SP_ChangePassword", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@UserID", (object)UserID ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@NewPassword", NewPassword);
+
+                        RowAffected = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                clsDataAccessHelper.HandleException(ex);
+            }
+
+            return (RowAffected > 0);
+        }
     }
 }
