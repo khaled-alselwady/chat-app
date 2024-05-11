@@ -53,6 +53,12 @@ namespace ChatAppDesktopUI.GlobalClasses
                 "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        public static void ShowMissingDataMessage(string entityType)
+        {
+            MessageBox.Show($"No {entityType} found with this ID", "Missing Data",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
         public static void ShowMissingDataMessage(string entityType, int? entityID)
         {
             MessageBox.Show($"No {entityType} found with ID: {entityID}", "Missing Data",
@@ -68,6 +74,12 @@ namespace ChatAppDesktopUI.GlobalClasses
         public static void ShowNotImplementedFeatures()
         {
             MessageBox.Show("This feature is not implemented yet!");
+        }
+
+        public static void ShowCouldNotFindImage(string imagePath)
+        {
+            MessageBox.Show($"Could not find this image: = {imagePath}", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
