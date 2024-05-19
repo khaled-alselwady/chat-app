@@ -1,4 +1,5 @@
-﻿using ChatAppDesktopUI.GlobalClasses;
+﻿using ChatAppBusiness;
+using ChatAppDesktopUI.GlobalClasses;
 using System;
 using System.Windows.Forms;
 
@@ -19,6 +20,18 @@ namespace ChatAppDesktopUI.Contacts
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsername, null);
+            }
+
+            if (!clsUser.Exists(txtUsername.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "This username does not exist");
+                return;
             }
             else
             {
