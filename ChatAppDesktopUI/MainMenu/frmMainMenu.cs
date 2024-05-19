@@ -1,4 +1,5 @@
 ﻿using ChatAppBusiness;
+using ChatAppDesktopUI.Contacts;
 using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Login;
 using ChatAppDesktopUI.Properties;
@@ -41,7 +42,8 @@ namespace ChatAppDesktopUI.MainMenu
 
         private void btnAddNewContent_Click(object sender, EventArgs e)
         {
-            clsStandardMessages.ShowNotImplementedFeatures();
+            frmAddNewContactToMainMenu addNewContact = new frmAddNewContactToMainMenu();
+            addNewContact.ShowDialog();
         }
 
         private void pbUserProfile_Click(object sender, EventArgs e)

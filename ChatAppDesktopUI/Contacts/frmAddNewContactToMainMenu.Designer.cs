@@ -33,6 +33,7 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Fuchsia;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // frmAddNewContactToMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,5 +131,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
