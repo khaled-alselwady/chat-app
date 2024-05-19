@@ -1,4 +1,4 @@
-﻿namespace ChatAppDesktopUI.Chats.UserControls
+﻿namespace ChatAppDesktopUI.Contacts.UserControls
 {
     partial class ucSubContactInfo
     {

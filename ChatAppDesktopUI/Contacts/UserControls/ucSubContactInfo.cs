@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ChatAppDesktopUI.Chats.UserControls
+namespace ChatAppDesktopUI.Contacts.UserControls
 {
     public partial class ucSubContactInfo : UserControl
     {

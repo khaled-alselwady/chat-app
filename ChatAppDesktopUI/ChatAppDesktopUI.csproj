@@ -56,10 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chats\UserControls\ucSubContactInfo.cs">
+    <Compile Include="Contacts\frmAddNewContactToMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\frmAddNewContactToMainMenu.Designer.cs">
+      <DependentUpon>frmAddNewContactToMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\UserControls\ucSubContactInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Chats\UserControls\ucSubContactInfo.Designer.cs">
+    <Compile Include="Contacts\UserControls\ucSubContactInfo.Designer.cs">
       <DependentUpon>ucSubContactInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalClasses\clsErrorLogger.cs" />
@@ -107,7 +113,10 @@
     <Compile Include="Users\UserControls\ucUserCard.Designer.cs">
       <DependentUpon>ucUserCard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Chats\UserControls\ucSubContactInfo.resx">
+    <EmbeddedResource Include="Contacts\frmAddNewContactToMainMenu.resx">
+      <DependentUpon>frmAddNewContactToMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\UserControls\ucSubContactInfo.resx">
       <DependentUpon>ucSubContactInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLoginScreen.resx">
