@@ -62,6 +62,12 @@
     <Compile Include="Chats\UserControls\ucMessage.Designer.cs">
       <DependentUpon>ucMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chats\UserControls\ucMessageContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chats\UserControls\ucMessageContainer.Designer.cs">
+      <DependentUpon>ucMessageContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contacts\frmAddNewContactToMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="Chats\UserControls\ucMessage.resx">
       <DependentUpon>ucMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chats\UserControls\ucMessageContainer.resx">
+      <DependentUpon>ucMessageContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\frmAddNewContactToMainMenu.resx">
       <DependentUpon>frmAddNewContactToMainMenu.cs</DependentUpon>
@@ -233,6 +242,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block-contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-message.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelToIncludeNoLContentsExistPanel = new System.Windows.Forms.Panel();
-            this.panelNoLContentsExist = new System.Windows.Forms.Panel();
-            this.btnAddNewContent2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelChatWord = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutChatsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbUserProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAddNewContent = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panelChatWord = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelToIncludeNoLContentsExistPanel = new System.Windows.Forms.Panel();
+            this.panelNoLContentsExist = new System.Windows.Forms.Panel();
+            this.btnAddNewContent2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelMassages = new System.Windows.Forms.Panel();
             this.panelNoSelectedMessageText = new Guna.UI2.WinForms.Guna2Panel();
             this.lblNoSelectedMessageText = new System.Windows.Forms.Label();
-            this.flowLayoutChatsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.panelToIncludeNoLContentsExistPanel.SuspendLayout();
-            this.panelNoLContentsExist.SuspendLayout();
-            this.panelChatWord.SuspendLayout();
+            this.flowLayoutChatsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserProfile)).BeginInit();
+            this.panelChatWord.SuspendLayout();
+            this.panelToIncludeNoLContentsExistPanel.SuspendLayout();
+            this.panelNoLContentsExist.SuspendLayout();
             this.panelMassages.SuspendLayout();
             this.panelNoSelectedMessageText.SuspendLayout();
-            this.flowLayoutChatsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,69 +65,16 @@
             this.panel1.Size = new System.Drawing.Size(317, 647);
             this.panel1.TabIndex = 0;
             // 
-            // panelToIncludeNoLContentsExistPanel
+            // flowLayoutChatsPanel
             // 
-            this.panelToIncludeNoLContentsExistPanel.Controls.Add(this.panelNoLContentsExist);
-            this.panelToIncludeNoLContentsExistPanel.Location = new System.Drawing.Point(3, 167);
-            this.panelToIncludeNoLContentsExistPanel.Name = "panelToIncludeNoLContentsExistPanel";
-            this.panelToIncludeNoLContentsExistPanel.Size = new System.Drawing.Size(308, 413);
-            this.panelToIncludeNoLContentsExistPanel.TabIndex = 2;
-            // 
-            // panelNoLContentsExist
-            // 
-            this.panelNoLContentsExist.Controls.Add(this.btnAddNewContent2);
-            this.panelNoLContentsExist.Controls.Add(this.label2);
-            this.panelNoLContentsExist.Location = new System.Drawing.Point(17, 114);
-            this.panelNoLContentsExist.Name = "panelNoLContentsExist";
-            this.panelNoLContentsExist.Size = new System.Drawing.Size(271, 117);
-            this.panelNoLContentsExist.TabIndex = 0;
-            // 
-            // btnAddNewContent2
-            // 
-            this.btnAddNewContent2.BorderRadius = 22;
-            this.btnAddNewContent2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewContent2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewContent2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewContent2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewContent2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewContent2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewContent2.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewContent2.Location = new System.Drawing.Point(51, 58);
-            this.btnAddNewContent2.Name = "btnAddNewContent2";
-            this.btnAddNewContent2.Size = new System.Drawing.Size(159, 45);
-            this.btnAddNewContent2.TabIndex = 2;
-            this.btnAddNewContent2.Text = "Add Content";
-            this.btnAddNewContent2.Click += new System.EventHandler(this.btnAddNewContent_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "No Contents Exist";
-            // 
-            // panelChatWord
-            // 
-            this.panelChatWord.Controls.Add(this.label1);
-            this.panelChatWord.Location = new System.Drawing.Point(3, 100);
-            this.panelChatWord.Name = "panelChatWord";
-            this.panelChatWord.Size = new System.Drawing.Size(317, 61);
-            this.panelChatWord.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chats";
+            this.flowLayoutChatsPanel.Controls.Add(this.panel2);
+            this.flowLayoutChatsPanel.Controls.Add(this.panelChatWord);
+            this.flowLayoutChatsPanel.Controls.Add(this.panelToIncludeNoLContentsExistPanel);
+            this.flowLayoutChatsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutChatsPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutChatsPanel.Name = "flowLayoutChatsPanel";
+            this.flowLayoutChatsPanel.Size = new System.Drawing.Size(317, 647);
+            this.flowLayoutChatsPanel.TabIndex = 1;
             // 
             // panel2
             // 
@@ -204,10 +151,73 @@
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // panelChatWord
+            // 
+            this.panelChatWord.Controls.Add(this.label1);
+            this.panelChatWord.Location = new System.Drawing.Point(3, 100);
+            this.panelChatWord.Name = "panelChatWord";
+            this.panelChatWord.Size = new System.Drawing.Size(317, 61);
+            this.panelChatWord.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 45);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chats";
+            // 
+            // panelToIncludeNoLContentsExistPanel
+            // 
+            this.panelToIncludeNoLContentsExistPanel.Controls.Add(this.panelNoLContentsExist);
+            this.panelToIncludeNoLContentsExistPanel.Location = new System.Drawing.Point(3, 167);
+            this.panelToIncludeNoLContentsExistPanel.Name = "panelToIncludeNoLContentsExistPanel";
+            this.panelToIncludeNoLContentsExistPanel.Size = new System.Drawing.Size(308, 413);
+            this.panelToIncludeNoLContentsExistPanel.TabIndex = 2;
+            // 
+            // panelNoLContentsExist
+            // 
+            this.panelNoLContentsExist.Controls.Add(this.btnAddNewContent2);
+            this.panelNoLContentsExist.Controls.Add(this.label2);
+            this.panelNoLContentsExist.Location = new System.Drawing.Point(17, 114);
+            this.panelNoLContentsExist.Name = "panelNoLContentsExist";
+            this.panelNoLContentsExist.Size = new System.Drawing.Size(271, 117);
+            this.panelNoLContentsExist.TabIndex = 0;
+            // 
+            // btnAddNewContent2
+            // 
+            this.btnAddNewContent2.BorderRadius = 22;
+            this.btnAddNewContent2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewContent2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewContent2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewContent2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewContent2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewContent2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewContent2.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewContent2.Location = new System.Drawing.Point(51, 58);
+            this.btnAddNewContent2.Name = "btnAddNewContent2";
+            this.btnAddNewContent2.Size = new System.Drawing.Size(159, 45);
+            this.btnAddNewContent2.TabIndex = 2;
+            this.btnAddNewContent2.Text = "Add Content";
+            this.btnAddNewContent2.Click += new System.EventHandler(this.btnAddNewContent_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(20, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(226, 37);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "No Contents Exist";
+            // 
             // panelMassages
             // 
             this.panelMassages.BackgroundImage = global::ChatAppDesktopUI.Properties.Resources.chat_background2;
-            this.panelMassages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMassages.Controls.Add(this.panelNoSelectedMessageText);
             this.panelMassages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMassages.Location = new System.Drawing.Point(317, 0);
@@ -240,17 +250,6 @@
             this.lblNoSelectedMessageText.TabIndex = 0;
             this.lblNoSelectedMessageText.Text = "Select a chat to start messaging";
             // 
-            // flowLayoutChatsPanel
-            // 
-            this.flowLayoutChatsPanel.Controls.Add(this.panel2);
-            this.flowLayoutChatsPanel.Controls.Add(this.panelChatWord);
-            this.flowLayoutChatsPanel.Controls.Add(this.panelToIncludeNoLContentsExistPanel);
-            this.flowLayoutChatsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutChatsPanel.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutChatsPanel.Name = "flowLayoutChatsPanel";
-            this.flowLayoutChatsPanel.Size = new System.Drawing.Size(317, 647);
-            this.flowLayoutChatsPanel.TabIndex = 1;
-            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,17 +268,17 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.panel1.ResumeLayout(false);
+            this.flowLayoutChatsPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserProfile)).EndInit();
+            this.panelChatWord.ResumeLayout(false);
+            this.panelChatWord.PerformLayout();
             this.panelToIncludeNoLContentsExistPanel.ResumeLayout(false);
             this.panelNoLContentsExist.ResumeLayout(false);
             this.panelNoLContentsExist.PerformLayout();
-            this.panelChatWord.ResumeLayout(false);
-            this.panelChatWord.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserProfile)).EndInit();
             this.panelMassages.ResumeLayout(false);
             this.panelNoSelectedMessageText.ResumeLayout(false);
             this.panelNoSelectedMessageText.PerformLayout();
-            this.flowLayoutChatsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
