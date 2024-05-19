@@ -1,6 +1,7 @@
 ﻿using ChatAppBusiness;
 using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Users;
+using System;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.Chats.UserControls
@@ -22,6 +23,29 @@ namespace ChatAppDesktopUI.Chats.UserControls
         {
             clsGlobal.ShowUserImageInPictureBox(_recipient?.ImagePath, pbContactImage);
             lblContactName.Text = _recipient?.Username ?? "N/A";
+        }
+
+        private void AddMessage(string message)
+        {
+            var chatMessage = new ucMessage
+            {
+                MessageContent = message,
+                MessageTime = DateTime.Now,
+            };
+
+            ucMessage.WidthOfContainer = panelMessageContainer.Width - 20;
+
+            // Add the control to a panel
+            panelMessageContainer.Controls.Add(chatMessage);
+
+            //// Position the new control appropriately
+            chatMessage.Top = panelMessageContainer.Controls.Count > 1
+                ? panelMessageContainer.Controls[panelMessageContainer.Controls.Count - 2].Bottom + 10
+                : 10;
+
+            // Ensure the panel refreshes its layout
+            panelMessageContainer.PerformLayout();
+            panelMessageContainer.Invalidate();
         }
 
         private void btnContactInfo_Click(object sender, System.EventArgs e)
@@ -79,7 +103,11 @@ namespace ChatAppDesktopUI.Chats.UserControls
 
         private void btnSendMessage_Click(object sender, System.EventArgs e)
         {
-            clsStandardMessages.ShowNotImplementedFeatures();
+            if (!string.IsNullOrWhiteSpace(txtMessage.Text))
+            {
+                AddMessage(txtMessage.Text);
+                txtMessage.Clear();
+            }
         }
     }
 }

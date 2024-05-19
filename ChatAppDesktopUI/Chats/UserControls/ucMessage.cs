@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.Chats.UserControls
@@ -12,28 +13,65 @@ namespace ChatAppDesktopUI.Chats.UserControls
             set
             {
                 _messageContent = value;
-                lblMessageContent.Text = value;
+                lblMessageContent.Text = _messageContent;
                 AdjustSize();
             }
+        }
+
+        private DateTime _messageTime;
+        public DateTime MessageTime
+        {
+            get => _messageTime;
+            set
+            {
+                _messageTime = value;
+                lblMessageTime.Text = value.ToShortTimeString();
+            }
+        }
+
+        public static int WidthOfContainer { get; set; } = 0;
+
+        private void _InitializeCustomLabel()
+        {
+            lblMessageContent = new Label();
+            lblMessageContent.AutoSize = true;
+            lblMessageContent.AutoEllipsis = true;
+            lblMessageContent.TextAlign = ContentAlignment.TopLeft;
+            lblMessageContent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            // Customize font properties
+            lblMessageContent.Font = new Font("Segoe UI", 12, FontStyle.Regular); // Example: Arial, 12pt, Regular
+
+            // Customize font color
+            lblMessageContent.ForeColor = Color.White; // Example: Black
+
+            // Increase padding around the label
+            lblMessageContent.Padding = new Padding(10);
+
+            // Add label to the control's controls collection
+            this.Controls.Add(lblMessageContent);
         }
 
         public ucMessage()
         {
             InitializeComponent();
 
-            lblMessageContent.AutoSize = false;
-            lblMessageContent.MaximumSize = new Size(this.Width - 20, 0); // Maximum width and no limit on height
-            lblMessageContent.AutoEllipsis = true;
-            lblMessageContent.TextAlign = ContentAlignment.TopLeft;
+            _InitializeCustomLabel();
         }
 
         private void AdjustSize()
         {
-            // Measure the size of the message
-            Size size = TextRenderer.MeasureText(lblMessageContent.Text, lblMessageContent.Font, new Size(this.Width, int.MaxValue), TextFormatFlags.WordBreak);
+            int maxWidth = WidthOfContainer / 2;
+            int fixedWidth = maxWidth < this.Width ? maxWidth : this.Width;
 
-            // Adjust the height of the label and the user control
-            lblMessageContent.Height = size.Height;
+            lblMessageContent.MaximumSize = new Size(fixedWidth, 0); // Set maximum width
+
+            using (Graphics g = CreateGraphics())
+            {
+                SizeF size = g.MeasureString(lblMessageContent.Text, lblMessageContent.Font, fixedWidth);
+                lblMessageContent.Height = (int)Math.Ceiling(size.Height);
+            }
+
             this.Height = lblMessageContent.Bottom + 10; // Adding some padding
         }
     }

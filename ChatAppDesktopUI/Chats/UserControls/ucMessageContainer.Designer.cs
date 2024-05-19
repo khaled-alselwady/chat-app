@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSendMessage = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panelMessageContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbContactImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -210,11 +211,21 @@
             this.btnSendMessage.TabIndex = 7;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
+            // panelMessageContainer
+            // 
+            this.panelMessageContainer.BackColor = System.Drawing.Color.Transparent;
+            this.panelMessageContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMessageContainer.Location = new System.Drawing.Point(0, 76);
+            this.panelMessageContainer.Name = "panelMessageContainer";
+            this.panelMessageContainer.Size = new System.Drawing.Size(908, 521);
+            this.panelMessageContainer.TabIndex = 2;
+            // 
             // ucMessageContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChatAppDesktopUI.Properties.Resources.chat_background2;
+            this.Controls.Add(this.panelMessageContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ucMessageContainer";
@@ -238,5 +249,6 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2CircleButton btnSendMessage;
         private Guna.UI2.WinForms.Guna2TextBox txtMessage;
+        private System.Windows.Forms.Panel panelMessageContainer;
     }
 }
