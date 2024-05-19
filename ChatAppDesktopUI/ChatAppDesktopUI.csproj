@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chats\UserControls\ucMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chats\UserControls\ucMessage.Designer.cs">
+      <DependentUpon>ucMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contacts\frmAddNewContactToMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Users\UserControls\ucUserCard.Designer.cs">
       <DependentUpon>ucUserCard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Chats\UserControls\ucMessage.resx">
+      <DependentUpon>ucMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contacts\frmAddNewContactToMainMenu.resx">
       <DependentUpon>frmAddNewContactToMainMenu.cs</DependentUpon>
     </EmbeddedResource>
