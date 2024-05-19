@@ -48,6 +48,7 @@
             this.pbContactImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbContactImage.TabIndex = 3;
             this.pbContactImage.TabStop = false;
+            this.pbContactImage.Click += new System.EventHandler(this.On_Click);
             this.pbContactImage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
             this.pbContactImage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
@@ -62,6 +63,7 @@
             this.lblContactName.Size = new System.Drawing.Size(48, 20);
             this.lblContactName.TabIndex = 4;
             this.lblContactName.Text = "label1";
+            this.lblContactName.Click += new System.EventHandler(this.On_Click);
             this.lblContactName.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
             this.lblContactName.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
@@ -76,6 +78,7 @@
             this.lblLastMessage.Size = new System.Drawing.Size(135, 17);
             this.lblLastMessage.TabIndex = 5;
             this.lblLastMessage.Text = "This is a last message";
+            this.lblLastMessage.Click += new System.EventHandler(this.On_Click);
             this.lblLastMessage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
             this.lblLastMessage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
@@ -90,6 +93,7 @@
             this.lblDateOfTheLastMessage.Size = new System.Drawing.Size(55, 15);
             this.lblDateOfTheLastMessage.TabIndex = 6;
             this.lblDateOfTheLastMessage.Text = "10:30 PM";
+            this.lblDateOfTheLastMessage.Click += new System.EventHandler(this.On_Click);
             this.lblDateOfTheLastMessage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
             this.lblDateOfTheLastMessage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
@@ -104,6 +108,7 @@
             this.Controls.Add(this.pbContactImage);
             this.Name = "ucSubContactInfo";
             this.Size = new System.Drawing.Size(317, 61);
+            this.Click += new System.EventHandler(this.On_Click);
             this.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pbContactImage)).EndInit();

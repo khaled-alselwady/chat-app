@@ -1,4 +1,5 @@
 ﻿using ChatAppBusiness;
+using ChatAppDesktopUI.Chats.UserControls;
 using ChatAppDesktopUI.Contacts;
 using ChatAppDesktopUI.Contacts.UserControls;
 using ChatAppDesktopUI.GlobalClasses;
@@ -20,23 +21,24 @@ namespace ChatAppDesktopUI.MainMenu
             _frmLogin = frmLogin;
         }
 
-        //private void _ShowUserImageInPictureBox(string path)
-        //{
-        //    if (File.Exists(path))
-        //    {
-        //        pbUserProfile.ImageLocation = path;
-        //    }
-        //    else
-        //    {
-        //        pbUserProfile.Image = Resources.default_male;
-        //    }
-        //}
+        private void _ShowChat(int? recipientID)
+        {
+            panelMassages.Controls.Clear();
 
-        private static ucSubContactInfo _FillSubContactInfo(clsUser user)
+            ucMessageContainer messageContainer = new ucMessageContainer();
+            messageContainer.ShowChat(clsGlobal.CurrentUser?.UserID, recipientID);
+            panelMassages.Controls.Add(messageContainer);
+
+            panelNoSelectedMessageText.Visible = false;
+        }
+
+        private ucSubContactInfo _FillSubContactInfo(clsUser user)
         {
             ucSubContactInfo subContactInfo = new ucSubContactInfo();
+            subContactInfo.ContactID = user.UserID;
             subContactInfo.ContactName = user.Username;
             subContactInfo.ImagePath = user.ImagePath;
+            subContactInfo.ContactIDBack += _ShowChat;
 
             return subContactInfo;
         }

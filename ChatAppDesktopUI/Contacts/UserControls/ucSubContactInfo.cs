@@ -7,6 +7,10 @@ namespace ChatAppDesktopUI.Contacts.UserControls
 {
     public partial class ucSubContactInfo : UserControl
     {
+        public Action<int?> ContactIDBack;
+
+        public int? ContactID { get; set; }
+
         private string _contactName;
         public string ContactName
         {
@@ -58,6 +62,11 @@ namespace ChatAppDesktopUI.Contacts.UserControls
         {
             this.BackColor = Color.FromArgb(41, 58, 76);
             this.Cursor = Cursors.Default;
+        }
+
+        private void On_Click(object sender, EventArgs e)
+        {
+            ContactIDBack?.Invoke(ContactID);
         }
     }
 }

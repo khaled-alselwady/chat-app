@@ -35,8 +35,8 @@
             this.lblContactName = new System.Windows.Forms.Label();
             this.pbContactImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSendMessage = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSendMessage = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbContactImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,7 +60,6 @@
             // 
             this.btnBlockContact.BackColor = System.Drawing.Color.Transparent;
             this.btnBlockContact.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnBlockContact.CheckedState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnBlockContact.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBlockContact.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBlockContact.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -70,7 +69,6 @@
             this.btnBlockContact.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBlockContact.ForeColor = System.Drawing.Color.White;
             this.btnBlockContact.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnBlockContact.HoverState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnBlockContact.Image = global::ChatAppDesktopUI.Properties.Resources.block_contact;
             this.btnBlockContact.ImageSize = new System.Drawing.Size(45, 45);
             this.btnBlockContact.Location = new System.Drawing.Point(695, 9);
@@ -85,7 +83,6 @@
             // 
             this.btnDeleteContact.BackColor = System.Drawing.Color.Transparent;
             this.btnDeleteContact.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnDeleteContact.CheckedState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnDeleteContact.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteContact.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeleteContact.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -95,7 +92,6 @@
             this.btnDeleteContact.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteContact.ForeColor = System.Drawing.Color.White;
             this.btnDeleteContact.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnDeleteContact.HoverState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnDeleteContact.Image = global::ChatAppDesktopUI.Properties.Resources.delete_contact;
             this.btnDeleteContact.ImageSize = new System.Drawing.Size(42, 42);
             this.btnDeleteContact.Location = new System.Drawing.Point(767, 9);
@@ -110,7 +106,6 @@
             // 
             this.btnContactInfo.BackColor = System.Drawing.Color.Transparent;
             this.btnContactInfo.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnContactInfo.CheckedState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnContactInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContactInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnContactInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -120,7 +115,6 @@
             this.btnContactInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnContactInfo.ForeColor = System.Drawing.Color.White;
             this.btnContactInfo.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnContactInfo.HoverState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
             this.btnContactInfo.Image = global::ChatAppDesktopUI.Properties.Resources.contact_info;
             this.btnContactInfo.ImageSize = new System.Drawing.Size(45, 45);
             this.btnContactInfo.Location = new System.Drawing.Point(839, 9);
@@ -168,32 +162,6 @@
             this.panel2.Size = new System.Drawing.Size(908, 50);
             this.panel2.TabIndex = 1;
             // 
-            // btnSendMessage
-            // 
-            this.btnSendMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
-            this.btnSendMessage.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSendMessage.CheckedState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
-            this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendMessage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSendMessage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSendMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSendMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSendMessage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSendMessage.FillColor = System.Drawing.Color.Transparent;
-            this.btnSendMessage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSendMessage.ForeColor = System.Drawing.Color.White;
-            this.btnSendMessage.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnSendMessage.HoverState.Image = global::ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
-            this.btnSendMessage.Image = global::ChatAppDesktopUI.Properties.Resources.send_message;
-            this.btnSendMessage.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnSendMessage.Location = new System.Drawing.Point(842, 0);
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.PressedColor = System.Drawing.Color.Transparent;
-            this.btnSendMessage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSendMessage.Size = new System.Drawing.Size(66, 50);
-            this.btnSendMessage.TabIndex = 7;
-            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
-            // 
             // txtMessage
             // 
             this.txtMessage.BorderThickness = 0;
@@ -206,7 +174,8 @@
             this.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
             this.txtMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtMessage.ForeColor = System.Drawing.Color.White;
             this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMessage.Location = new System.Drawing.Point(0, 0);
             this.txtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -216,6 +185,30 @@
             this.txtMessage.SelectedText = "";
             this.txtMessage.Size = new System.Drawing.Size(842, 50);
             this.txtMessage.TabIndex = 8;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))));
+            this.btnSendMessage.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendMessage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendMessage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSendMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSendMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSendMessage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSendMessage.FillColor = System.Drawing.Color.Transparent;
+            this.btnSendMessage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSendMessage.ForeColor = System.Drawing.Color.White;
+            this.btnSendMessage.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnSendMessage.Image = global::ChatAppDesktopUI.Properties.Resources.send_message;
+            this.btnSendMessage.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSendMessage.Location = new System.Drawing.Point(842, 0);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.PressedColor = System.Drawing.Color.Transparent;
+            this.btnSendMessage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSendMessage.Size = new System.Drawing.Size(66, 50);
+            this.btnSendMessage.TabIndex = 7;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // ucMessageContainer
             // 
