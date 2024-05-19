@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chats\UserControls\ucSubContactInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chats\UserControls\ucSubContactInfo.Designer.cs">
+      <DependentUpon>ucSubContactInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalClasses\clsErrorLogger.cs" />
     <Compile Include="GlobalClasses\clsFormat.cs" />
     <Compile Include="GlobalClasses\clsGlobal.cs" />
@@ -101,6 +107,9 @@
     <Compile Include="Users\UserControls\ucUserCard.Designer.cs">
       <DependentUpon>ucUserCard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Chats\UserControls\ucSubContactInfo.resx">
+      <DependentUpon>ucSubContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLoginScreen.resx">
       <DependentUpon>frmLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
