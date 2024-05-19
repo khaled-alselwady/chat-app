@@ -124,5 +124,8 @@ namespace ChatAppBusiness
 
         public static bool ChangePassword(int? UserID, string NewPassword)
             => clsUserData.ChangePassword(UserID, NewPassword);
+
+        public static string GetImagePath(int? userID)
+            => clsUserData.GetImagePath(userID);
     }
 }

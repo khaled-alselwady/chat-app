@@ -28,7 +28,8 @@ namespace ChatAppDesktopUI.Users.UserControls
             }
             else
             {
-                clsStandardMessages.ShowCouldNotFindImage(_user.ImagePath);
+                pbUserImage.ImageLocation = null;
+                pbUserImage.Image = Resources.default_male;
             }
         }
 

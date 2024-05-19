@@ -257,5 +257,42 @@ namespace ChatAppDataAccess
 
             return (RowAffected > 0);
         }
+
+        public static string GetImagePath(int? userID)
+        {
+            // This function will return the new person id if succeeded and null if not
+            string imagePath = null;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SP_GetImagePathByUserID", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@UserID", userID);
+
+                        SqlParameter outputIdParam = new SqlParameter("@ImagePath", SqlDbType.NVarChar, -1)
+                        {
+                            Direction = ParameterDirection.Output
+                        };
+                        command.Parameters.Add(outputIdParam);
+
+                        command.ExecuteNonQuery();
+
+                        imagePath = outputIdParam.Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                clsDataAccessHelper.HandleException(ex);
+            }
+
+            return imagePath;
+        }
     }
 }

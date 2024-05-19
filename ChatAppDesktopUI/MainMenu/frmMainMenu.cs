@@ -1,6 +1,10 @@
-﻿using ChatAppDesktopUI.GlobalClasses;
+﻿using ChatAppBusiness;
+using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Login;
+using ChatAppDesktopUI.Properties;
+using ChatAppDesktopUI.Users;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.MainMenu
@@ -14,6 +18,18 @@ namespace ChatAppDesktopUI.MainMenu
             InitializeComponent();
 
             _frmLogin = frmLogin;
+        }
+
+        private void _ShowUserImageInPictureBox(string path)
+        {
+            if (File.Exists(path))
+            {
+                pbUserProfile.ImageLocation = path;
+            }
+            else
+            {
+                pbUserProfile.Image = Resources.default_male;
+            }
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -30,7 +46,10 @@ namespace ChatAppDesktopUI.MainMenu
 
         private void pbUserProfile_Click(object sender, EventArgs e)
         {
-            clsStandardMessages.ShowNotImplementedFeatures();
+            frmShowUserInfo showUserInfo = new frmShowUserInfo(clsGlobal.CurrentUser?.UserID);
+            showUserInfo.ShowDialog();
+
+            _ShowUserImageInPictureBox(clsUser.GetImagePath(clsGlobal.CurrentUser?.UserID));
         }
 
         private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,6 +57,11 @@ namespace ChatAppDesktopUI.MainMenu
             clsGlobal.CurrentUser = null;
             _frmLogin.Show();
             this.Hide();
+        }
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+            _ShowUserImageInPictureBox(clsGlobal.CurrentUser?.ImagePath);
         }
     }
 }
