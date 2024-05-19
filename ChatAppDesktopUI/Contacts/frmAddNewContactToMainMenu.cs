@@ -7,7 +7,7 @@ namespace ChatAppDesktopUI.Contacts
 {
     public partial class frmAddNewContactToMainMenu : Form
     {
-        public Action UsernameBack;
+        public Action<string> UsernameBack;
 
         public frmAddNewContactToMainMenu()
         {
@@ -47,7 +47,7 @@ namespace ChatAppDesktopUI.Contacts
                 return;
             }
 
-            UsernameBack?.Invoke();
+            UsernameBack?.Invoke(txtUsername.Text.Trim());
             Close();
         }
     }
