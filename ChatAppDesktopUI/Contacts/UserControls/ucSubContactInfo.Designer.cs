@@ -48,18 +48,22 @@
             this.pbContactImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbContactImage.TabIndex = 3;
             this.pbContactImage.TabStop = false;
+            this.pbContactImage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
+            this.pbContactImage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
             // lblContactName
             // 
             this.lblContactName.AutoSize = true;
             this.lblContactName.BackColor = System.Drawing.Color.Transparent;
-            this.lblContactName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactName.ForeColor = System.Drawing.Color.White;
             this.lblContactName.Location = new System.Drawing.Point(58, 1);
             this.lblContactName.Name = "lblContactName";
-            this.lblContactName.Size = new System.Drawing.Size(50, 20);
+            this.lblContactName.Size = new System.Drawing.Size(48, 20);
             this.lblContactName.TabIndex = 4;
             this.lblContactName.Text = "label1";
+            this.lblContactName.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
+            this.lblContactName.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
             // lblLastMessage
             // 
@@ -72,6 +76,8 @@
             this.lblLastMessage.Size = new System.Drawing.Size(135, 17);
             this.lblLastMessage.TabIndex = 5;
             this.lblLastMessage.Text = "This is a last message";
+            this.lblLastMessage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
+            this.lblLastMessage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
             // lblDateOfTheLastMessage
             // 
@@ -84,6 +90,8 @@
             this.lblDateOfTheLastMessage.Size = new System.Drawing.Size(55, 15);
             this.lblDateOfTheLastMessage.TabIndex = 6;
             this.lblDateOfTheLastMessage.Text = "10:30 PM";
+            this.lblDateOfTheLastMessage.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
+            this.lblDateOfTheLastMessage.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             // 
             // ucSubContactInfo
             // 
@@ -96,6 +104,8 @@
             this.Controls.Add(this.pbContactImage);
             this.Name = "ucSubContactInfo";
             this.Size = new System.Drawing.Size(317, 61);
+            this.MouseEnter += new System.EventHandler(this.ucSubContactInfo_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ucSubContactInfo_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pbContactImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

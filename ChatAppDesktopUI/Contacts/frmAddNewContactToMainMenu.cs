@@ -50,5 +50,10 @@ namespace ChatAppDesktopUI.Contacts
             UsernameBack?.Invoke(txtUsername.Text.Trim());
             Close();
         }
+
+        private void frmAddNewContactToMainMenu_Activated(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+        }
     }
 }

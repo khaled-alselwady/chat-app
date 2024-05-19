@@ -3,10 +3,8 @@ using ChatAppDesktopUI.Contacts;
 using ChatAppDesktopUI.Contacts.UserControls;
 using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Login;
-using ChatAppDesktopUI.Properties;
 using ChatAppDesktopUI.Users;
 using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.MainMenu
@@ -22,17 +20,17 @@ namespace ChatAppDesktopUI.MainMenu
             _frmLogin = frmLogin;
         }
 
-        private void _ShowUserImageInPictureBox(string path)
-        {
-            if (File.Exists(path))
-            {
-                pbUserProfile.ImageLocation = path;
-            }
-            else
-            {
-                pbUserProfile.Image = Resources.default_male;
-            }
-        }
+        //private void _ShowUserImageInPictureBox(string path)
+        //{
+        //    if (File.Exists(path))
+        //    {
+        //        pbUserProfile.ImageLocation = path;
+        //    }
+        //    else
+        //    {
+        //        pbUserProfile.Image = Resources.default_male;
+        //    }
+        //}
 
         private static ucSubContactInfo _FillSubContactInfo(clsUser user)
         {
@@ -84,7 +82,7 @@ namespace ChatAppDesktopUI.MainMenu
             frmShowUserInfo showUserInfo = new frmShowUserInfo(clsGlobal.CurrentUser?.UserID);
             showUserInfo.ShowDialog();
 
-            _ShowUserImageInPictureBox(clsUser.GetImagePath(clsGlobal.CurrentUser?.UserID));
+            clsGlobal.ShowUserImageInPictureBox(clsUser.GetImagePath(clsGlobal.CurrentUser?.UserID), pbUserProfile);
         }
 
         private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -96,7 +94,7 @@ namespace ChatAppDesktopUI.MainMenu
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            _ShowUserImageInPictureBox(clsGlobal.CurrentUser?.ImagePath);
+            clsGlobal.ShowUserImageInPictureBox(clsUser.GetImagePath(clsGlobal.CurrentUser?.UserID), pbUserProfile);
         }
     }
 }

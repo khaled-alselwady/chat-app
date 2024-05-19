@@ -1,6 +1,9 @@
 ﻿using ChatAppBusiness;
+using ChatAppDesktopUI.Properties;
+using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -176,6 +179,18 @@ namespace ChatAppDesktopUI.GlobalClasses
                     // Read the decrypted data from the StreamReader
                     return srDecrypt.ReadToEnd();
                 }
+            }
+        }
+
+        public static void ShowUserImageInPictureBox(string path, Guna2CirclePictureBox pb)
+        {
+            if (File.Exists(path))
+            {
+                pb.ImageLocation = path;
+            }
+            else
+            {
+                pb.Image = Resources.default_male;
             }
         }
     }

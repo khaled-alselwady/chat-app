@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChatAppDesktopUI.GlobalClasses;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.Contacts.UserControls
@@ -34,12 +36,28 @@ namespace ChatAppDesktopUI.Contacts.UserControls
         public string ImagePath
         {
             get => _imagePath;
-            set => _imagePath = pbContactImage.ImageLocation = value;
+            set
+            {
+                _imagePath = value;
+                clsGlobal.ShowUserImageInPictureBox(_imagePath, pbContactImage);
+            }
         }
 
         public ucSubContactInfo()
         {
             InitializeComponent();
+        }
+
+        private void ucSubContactInfo_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(53, 60, 67);
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void ucSubContactInfo_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(41, 58, 76);
+            this.Cursor = Cursors.Default;
         }
     }
 }
