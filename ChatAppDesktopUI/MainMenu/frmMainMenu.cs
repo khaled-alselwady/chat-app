@@ -32,6 +32,15 @@ namespace ChatAppDesktopUI.MainMenu
             panelNoSelectedMessageText.Visible = false;
         }
 
+        private static void _SaveUserContactToDatabase(int? contactID)
+        {
+            clsUserContact userContact = new clsUserContact();
+            userContact.UserID = clsGlobal.CurrentUser?.UserID;
+            userContact.ContactID = contactID;
+
+            userContact.Save();
+        }
+
         private ucSubContactInfo _FillSubContactInfo(clsUser user)
         {
             ucSubContactInfo subContactInfo = new ucSubContactInfo();
@@ -60,8 +69,9 @@ namespace ChatAppDesktopUI.MainMenu
                 return;
             }
 
-            ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
+            _SaveUserContactToDatabase(user.UserID);
 
+            ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
             _AddContactInfoToTheChatsPanel(subContactInfo);
         }
 
