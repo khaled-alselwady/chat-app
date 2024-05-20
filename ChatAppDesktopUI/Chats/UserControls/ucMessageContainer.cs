@@ -25,6 +25,16 @@ namespace ChatAppDesktopUI.Chats.UserControls
             lblContactName.Text = _recipient?.Username ?? "N/A";
         }
 
+        private void _SaveMessageToDatabase()
+        {
+            clsMessage message = new clsMessage();
+            message.SenderID = _senderID;
+            message.RecipientID = _recipientID;
+            message.MessageContent = txtMessage.Text;
+
+            message.Save();
+        }
+
         private void AddMessage(string message)
         {
             var chatMessage = new ucMessage
@@ -38,7 +48,7 @@ namespace ChatAppDesktopUI.Chats.UserControls
             // Add the control to a panel
             panelMessageContainer.Controls.Add(chatMessage);
 
-            //// Position the new control appropriately
+            // Position the new control appropriately
             chatMessage.Top = panelMessageContainer.Controls.Count > 1
                 ? panelMessageContainer.Controls[panelMessageContainer.Controls.Count - 2].Bottom + 10
                 : 10;
@@ -106,6 +116,9 @@ namespace ChatAppDesktopUI.Chats.UserControls
             if (!string.IsNullOrWhiteSpace(txtMessage.Text))
             {
                 AddMessage(txtMessage.Text);
+
+                _SaveMessageToDatabase();
+
                 txtMessage.Clear();
             }
         }

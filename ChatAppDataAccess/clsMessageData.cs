@@ -54,8 +54,7 @@ namespace ChatAppDataAccess
             return isFound;
         }
 
-        public static int? Add(int senderID, int recipientID, string messageContent,
-            DateTime messageDate, byte status)
+        public static int? Add(int senderID, int recipientID, string messageContent)
         {
             // This function will return the new person id if succeeded and null if not
             int? messageID = null;
@@ -73,8 +72,6 @@ namespace ChatAppDataAccess
                         command.Parameters.AddWithValue("@SenderID", senderID);
                         command.Parameters.AddWithValue("@RecipientID", recipientID);
                         command.Parameters.AddWithValue("@MessageContent", messageContent);
-                        command.Parameters.AddWithValue("@MessageDate", messageDate);
-                        command.Parameters.AddWithValue("@Status", status);
 
                         SqlParameter outputIdParam = new SqlParameter("@NewMessageID", SqlDbType.Int)
                         {

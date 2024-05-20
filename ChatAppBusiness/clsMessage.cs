@@ -80,7 +80,7 @@ namespace ChatAppBusiness
 
         private bool _Add()
         {
-            MessageID = clsMessageData.Add(SenderID.Value, RecipientID.Value, MessageContent, MessageDate, (byte)Status);
+            MessageID = clsMessageData.Add(SenderID.Value, RecipientID.Value, MessageContent);
 
             return (MessageID.HasValue);
         }
