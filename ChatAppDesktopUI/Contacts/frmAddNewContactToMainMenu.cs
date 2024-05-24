@@ -17,7 +17,7 @@ namespace ChatAppDesktopUI.Contacts
             if (string.IsNullOrWhiteSpace(txtUsername.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtUsername, "This field is required!");
+                errorProvider1.SetError(txtUsername, "Username is required. Please enter a username.");
                 return;
             }
             else
@@ -28,8 +28,29 @@ namespace ChatAppDesktopUI.Contacts
             if (!clsUser.Exists(txtUsername.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtUsername, "This username does not exist");
+                errorProvider1.SetError(txtUsername, "The entered username does not exist. Please check and try again.");
                 return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsername, null);
+            }
+
+            if (txtUsername.Text.Trim() == clsGlobal.CurrentUser?.Username)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "You cannot add yourself as a contact. Please choose a different username.");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsername, null);
+            }
+
+            if (clsGlobal.CurrentUser?.IsContactByContactUsername(txtUsername.Text.Trim()) ?? false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "This user is already in your contacts. Please choose a different username.");
             }
             else
             {

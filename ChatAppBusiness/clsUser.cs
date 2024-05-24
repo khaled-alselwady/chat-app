@@ -127,5 +127,8 @@ namespace ChatAppBusiness
 
         public static string GetImagePath(int? userID)
             => clsUserData.GetImagePath(userID);
+
+        public bool IsContactByContactUsername(string contactUsername)
+            => clsUserContact.CheckIfUserIsContactByContactUsername(this.UserID, contactUsername);
     }
 }

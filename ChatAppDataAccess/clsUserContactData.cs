@@ -130,5 +130,8 @@ namespace ChatAppDataAccess
 
         public static DataTable AllUserIDAndUsernameOfContactsOfUser(int? userID)
             => clsDataAccessHelper.All("SP_GetUserIDAndUsernameOfAllContactsOfUser", "UserID", userID);
+
+        public static bool CheckIfUserIsContactByContactUsername(int? userID, string contactUsername)
+            => clsDataAccessHelper.Exists("SP_CheckIfUserIsContactByContactUsername", "CurrentUserID", userID, "ContactUsername", contactUsername);
     }
 }
