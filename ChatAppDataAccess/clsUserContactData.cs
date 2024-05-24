@@ -20,7 +20,7 @@ namespace ChatAppDataAccess
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@UserContactID", (object)userContactID ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@UserContactID", userContactID);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -127,5 +127,8 @@ namespace ChatAppDataAccess
 
         public static DataTable All()
         => clsDataAccessHelper.All("SP_GetAllUserContacts");
+
+        public static DataTable AllUserIDAndUsernameOfContactsOfUser(int? userID)
+            => clsDataAccessHelper.All("SP_GetUserIDAndUsernameOfAllContactsOfUser", "UserID", userID);
     }
 }

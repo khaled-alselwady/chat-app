@@ -5,6 +5,7 @@ using ChatAppDesktopUI.Contacts.UserControls;
 using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Login;
 using ChatAppDesktopUI.Users;
+using System.Data;
 
 namespace ChatAppDesktopUI.MainMenu
 {
@@ -19,6 +20,18 @@ namespace ChatAppDesktopUI.MainMenu
             _frmLogin = frmLogin;
         }
 
+        private bool _IsUserNull(clsUser user)
+        {
+            if (user == null)
+            {
+                MessageBox.Show($"No user found with this username", "Missing Data",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return true;
+            }
+
+            return false;
+        }
+
         private void _ShowChat(int? recipientID)
         {
             panelMassages.Controls.Clear();
@@ -30,7 +43,7 @@ namespace ChatAppDesktopUI.MainMenu
             panelNoSelectedMessageText.Visible = false;
         }
 
-        private static void _SaveUserContactToDatabase(int? contactID)
+        private void _SaveUserContactToDatabase(int? contactID)
         {
             clsUserContact userContact = new clsUserContact();
             userContact.UserID = clsGlobal.CurrentUser?.UserID;
@@ -56,14 +69,15 @@ namespace ChatAppDesktopUI.MainMenu
             flowLayoutChatsPanel.Controls.Add(subContactInfo);
         }
 
-        private void _GetUsernameFromAddNewContactToMainMenuForm(string username)
-        {
-            clsUser user = clsUser.Find(username);
+        private clsUser _GetUserInfoByUsername(string username)
+           => clsUser.Find(username);
 
-            if (user == null)
+        private void _GetUsernameOfNewContact(string username)
+        {
+            clsUser user = _GetUserInfoByUsername(username);
+
+            if (_IsUserNull(user))
             {
-                MessageBox.Show($"No user found with this username", "Missing Data",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -71,6 +85,33 @@ namespace ChatAppDesktopUI.MainMenu
 
             ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
             _AddContactInfoToTheChatsPanel(subContactInfo);
+        }
+
+        private DataTable _GetContactsOfCurrentUser()
+            => clsUserContact.AllUserIDAndUsernameOfContactsOfUser(clsGlobal.CurrentUser?.UserID);
+
+        private bool _HasContacts(DataTable dtContactsOfUser)
+            => (dtContactsOfUser.Rows.Count > 0);
+
+        private void _ShowContactsOfCurrentUser()
+        {
+            DataTable dtContactsOfUser = _GetContactsOfCurrentUser();
+
+            if (!_HasContacts(dtContactsOfUser))
+            {
+                return;
+            }
+
+            foreach (DataRow row in dtContactsOfUser.Rows)
+            {
+                clsUser user = _GetUserInfoByUsername(row["Username"].ToString());
+
+                if (!_IsUserNull(user))
+                {
+                    ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
+                    _AddContactInfoToTheChatsPanel(subContactInfo);
+                }
+            }
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -83,7 +124,7 @@ namespace ChatAppDesktopUI.MainMenu
         private void btnAddNewContent_Click(object sender, EventArgs e)
         {
             frmAddNewContactToMainMenu addNewContact = new frmAddNewContactToMainMenu();
-            addNewContact.UsernameBack += _GetUsernameFromAddNewContactToMainMenuForm;
+            addNewContact.UsernameBack += _GetUsernameOfNewContact;
             addNewContact.ShowDialog();
         }
 
@@ -105,6 +146,9 @@ namespace ChatAppDesktopUI.MainMenu
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
             clsGlobal.ShowUserImageInPictureBox(clsUser.GetImagePath(clsGlobal.CurrentUser?.UserID), pbUserProfile);
+
+            _ShowContactsOfCurrentUser();
         }
     }
 }
+

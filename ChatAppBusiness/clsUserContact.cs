@@ -93,5 +93,8 @@ namespace ChatAppBusiness
 
         public static DataTable All()
         => clsUserContactData.All();
+
+        public static DataTable AllUserIDAndUsernameOfContactsOfUser(int? userID)
+            => clsUserContactData.AllUserIDAndUsernameOfContactsOfUser(userID);
     }
 }
