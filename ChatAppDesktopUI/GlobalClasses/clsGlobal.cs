@@ -1,5 +1,5 @@
 ﻿using ChatAppBusiness;
-using ChatAppDesktopUI.Properties;
+//using ChatAppDesktopUI.Properties;
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System.Security.Cryptography;
@@ -188,7 +188,7 @@ namespace ChatAppDesktopUI.GlobalClasses
             }
             else
             {
-                pb.Image = Resources.default_male;
+                //pb.Image = Resources.default_male;
             }
         }
     }

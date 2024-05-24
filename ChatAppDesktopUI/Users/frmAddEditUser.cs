@@ -1,6 +1,6 @@
 ﻿using ChatAppBusiness;
 using ChatAppDesktopUI.GlobalClasses;
-using ChatAppDesktopUI.Properties;
+//using ChatAppDesktopUI.Properties;
 using Guna.UI2.WinForms;
 
 namespace ChatAppDesktopUI.Users
@@ -311,7 +311,7 @@ namespace ChatAppDesktopUI.Users
         private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pbUserImage.ImageLocation = null;
-            pbUserImage.Image = Resources.default_male;
+            //pbUserImage.Image = Resources.default_male;
             llRemoveImage.Visible = false;
         }
 

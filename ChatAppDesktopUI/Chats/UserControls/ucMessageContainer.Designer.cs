@@ -78,7 +78,7 @@
             btnBlockContact.Font = new Font("Segoe UI", 9F);
             btnBlockContact.ForeColor = Color.White;
             btnBlockContact.HoverState.FillColor = Color.Transparent;
-            btnBlockContact.Image = ChatAppDesktopUI.Properties.Resources.block_contact;
+            btnBlockContact.Image = Properties.Resources.block_contact;
             btnBlockContact.ImageSize = new Size(45, 45);
             btnBlockContact.Location = new Point(687, 7);
             btnBlockContact.Margin = new Padding(4, 3, 4, 3);
@@ -103,7 +103,7 @@
             btnDeleteContact.Font = new Font("Segoe UI", 9F);
             btnDeleteContact.ForeColor = Color.White;
             btnDeleteContact.HoverState.FillColor = Color.Transparent;
-            btnDeleteContact.Image = ChatAppDesktopUI.Properties.Resources.delete_contact;
+            btnDeleteContact.Image = Properties.Resources.delete_contact;
             btnDeleteContact.ImageSize = new Size(42, 42);
             btnDeleteContact.Location = new Point(760, 7);
             btnDeleteContact.Margin = new Padding(4, 3, 4, 3);
@@ -128,7 +128,7 @@
             btnContactInfo.Font = new Font("Segoe UI", 9F);
             btnContactInfo.ForeColor = Color.White;
             btnContactInfo.HoverState.FillColor = Color.Transparent;
-            btnContactInfo.Image = ChatAppDesktopUI.Properties.Resources.contact_info;
+            btnContactInfo.Image = Properties.Resources.contact_info;
             btnContactInfo.ImageSize = new Size(45, 45);
             btnContactInfo.Location = new Point(833, 7);
             btnContactInfo.Margin = new Padding(4, 3, 4, 3);
@@ -157,7 +157,7 @@
             // 
             pbContactImage.BackColor = Color.Transparent;
             pbContactImage.Cursor = Cursors.Hand;
-            pbContactImage.Image = ChatAppDesktopUI.Properties.Resources.default_male;
+            pbContactImage.Image = Properties.Resources.default_male;
             pbContactImage.ImageRotate = 0F;
             pbContactImage.Location = new Point(15, 6);
             pbContactImage.Margin = new Padding(4, 3, 4, 3);
@@ -221,7 +221,7 @@
             btnSendMessage.Font = new Font("Segoe UI", 9F);
             btnSendMessage.ForeColor = Color.White;
             btnSendMessage.HoverState.FillColor = Color.Transparent;
-            btnSendMessage.Image = ChatAppDesktopUI.Properties.Resources.send_message;
+            btnSendMessage.Image = Properties.Resources.send_message;
             btnSendMessage.ImageSize = new Size(30, 30);
             btnSendMessage.Location = new Point(831, 0);
             btnSendMessage.Margin = new Padding(4, 3, 4, 3);
@@ -236,7 +236,7 @@
             // panelMessageContainer
             // 
             panelMessageContainer.BackColor = Color.Transparent;
-            panelMessageContainer.BackgroundImage = ChatAppDesktopUI.Properties.Resources.chat_background2;
+            panelMessageContainer.BackgroundImage = Properties.Resources.chat_background;
             panelMessageContainer.Dock = DockStyle.Fill;
             panelMessageContainer.Location = new Point(0, 66);
             panelMessageContainer.Margin = new Padding(4, 3, 4, 3);

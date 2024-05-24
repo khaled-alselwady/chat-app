@@ -117,7 +117,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
-            BackgroundImage = ChatAppDesktopUI.Properties.Resources.chat_background2;
+            BackgroundImage = Properties.Resources.chat_background;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(463, 331);
             Controls.Add(txtUsername);

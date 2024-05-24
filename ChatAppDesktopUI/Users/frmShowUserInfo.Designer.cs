@@ -69,7 +69,7 @@
             btnClose.FillColor2 = Color.FromArgb(41, 58, 76);
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.White;
-            btnClose.Image = ChatAppDesktopUI.Properties.Resources.close_48;
+            btnClose.Image = Properties.Resources.close_48;
             btnClose.ImageAlign = HorizontalAlignment.Left;
             btnClose.ImageSize = new Size(30, 30);
             btnClose.Location = new Point(584, 366);

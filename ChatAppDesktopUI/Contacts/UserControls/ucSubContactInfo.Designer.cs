@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pbContactImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             lblContactName = new Label();
             lblLastMessage = new Label();
@@ -40,12 +40,12 @@
             // 
             pbContactImage.BackColor = Color.Transparent;
             pbContactImage.Cursor = Cursors.Hand;
-            pbContactImage.Image = ChatAppDesktopUI.Properties.Resources.default_male;
+            pbContactImage.Image = Properties.Resources.default_male;
             pbContactImage.ImageRotate = 0F;
             pbContactImage.Location = new Point(2, 6);
             pbContactImage.Margin = new Padding(4, 3, 4, 3);
             pbContactImage.Name = "pbContactImage";
-            pbContactImage.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            pbContactImage.ShadowDecoration.CustomizableEdges = customizableEdges1;
             pbContactImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             pbContactImage.Size = new Size(50, 50);
             pbContactImage.SizeMode = PictureBoxSizeMode.Zoom;

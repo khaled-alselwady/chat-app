@@ -1,6 +1,6 @@
 ﻿using ChatAppBusiness;
 using ChatAppDesktopUI.GlobalClasses;
-using ChatAppDesktopUI.Properties;
+//using ChatAppDesktopUI.Properties;
 
 namespace ChatAppDesktopUI.Users.UserControls
 {
@@ -27,7 +27,7 @@ namespace ChatAppDesktopUI.Users.UserControls
             else
             {
                 pbUserImage.ImageLocation = null;
-                pbUserImage.Image = Resources.default_male;
+                //pbUserImage.Image = Resources.default_male;
             }
         }
 
@@ -50,7 +50,7 @@ namespace ChatAppDesktopUI.Users.UserControls
             lblUserID.Text = "[????]";
             lblUsername.Text = "[????]";
             lblBio.Text = "[????]";
-            pbUserImage.Image = Resources.default_male;
+            //pbUserImage.Image = Resources.default_male;
 
             llEditUserInfo.Enabled = false;
         }

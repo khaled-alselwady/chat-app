@@ -89,7 +89,7 @@
             // pbUserImage
             // 
             pbUserImage.BorderStyle = BorderStyle.FixedSingle;
-            pbUserImage.Image = ChatAppDesktopUI.Properties.Resources.default_male;
+            pbUserImage.Image = Properties.Resources.default_male;
             pbUserImage.Location = new Point(511, 85);
             pbUserImage.Name = "pbUserImage";
             pbUserImage.Size = new Size(156, 138);
@@ -130,7 +130,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = ChatAppDesktopUI.Properties.Resources.edit_reservation32;
+            pictureBox3.Image = Properties.Resources.edit_reservation32;
             pictureBox3.Location = new Point(98, 167);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(35, 29);
@@ -150,7 +150,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = ChatAppDesktopUI.Properties.Resources.name;
+            pictureBox2.Image = Properties.Resources.name;
             pictureBox2.Location = new Point(98, 116);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(35, 29);
@@ -170,7 +170,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = ChatAppDesktopUI.Properties.Resources.id;
+            pictureBox1.Image = Properties.Resources.id;
             pictureBox1.Location = new Point(98, 65);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(35, 29);

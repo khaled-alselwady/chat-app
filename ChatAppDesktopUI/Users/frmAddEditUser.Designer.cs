@@ -141,7 +141,7 @@
             // pbUserImage
             // 
             pbUserImage.BorderStyle = BorderStyle.FixedSingle;
-            pbUserImage.Image = ChatAppDesktopUI.Properties.Resources.default_male;
+            pbUserImage.Image = Properties.Resources.default_male;
             pbUserImage.Location = new Point(625, 113);
             pbUserImage.Name = "pbUserImage";
             pbUserImage.Size = new Size(156, 138);
@@ -151,7 +151,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = ChatAppDesktopUI.Properties.Resources.edit_reservation32;
+            pictureBox4.Image = Properties.Resources.edit_reservation32;
             pictureBox4.Location = new Point(163, 226);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(31, 26);
@@ -241,7 +241,7 @@
             // 
             // pictureBox8
             // 
-            pictureBox8.Image = ChatAppDesktopUI.Properties.Resources.name;
+            pictureBox8.Image = Properties.Resources.name;
             pictureBox8.Location = new Point(163, 60);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(31, 26);
@@ -275,7 +275,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = ChatAppDesktopUI.Properties.Resources.password_user;
+            pictureBox2.Image = Properties.Resources.password_64;
             pictureBox2.Location = new Point(158, 19);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(31, 26);
@@ -363,7 +363,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = ChatAppDesktopUI.Properties.Resources.confirm_password_user;
+            pictureBox3.Image = Properties.Resources.confirm_password_user;
             pictureBox3.Location = new Point(158, 77);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(31, 26);
@@ -408,7 +408,7 @@
             btnSave.FillColor2 = Color.FromArgb(41, 58, 76);
             btnSave.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
-            btnSave.Image = ChatAppDesktopUI.Properties.Resources.save;
+            btnSave.Image = Properties.Resources.save;
             btnSave.ImageAlign = HorizontalAlignment.Left;
             btnSave.ImageSize = new Size(30, 30);
             btnSave.Location = new Point(652, 489);
@@ -434,7 +434,7 @@
             btnClose.FillColor2 = Color.FromArgb(41, 58, 76);
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.White;
-            btnClose.Image = ChatAppDesktopUI.Properties.Resources.close_48;
+            btnClose.Image = Properties.Resources.close_48;
             btnClose.ImageAlign = HorizontalAlignment.Left;
             btnClose.ImageSize = new Size(30, 30);
             btnClose.Location = new Point(491, 489);
@@ -448,7 +448,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = ChatAppDesktopUI.Properties.Resources.id;
+            pictureBox1.Image = Properties.Resources.id;
             pictureBox1.Location = new Point(89, 92);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(31, 26);

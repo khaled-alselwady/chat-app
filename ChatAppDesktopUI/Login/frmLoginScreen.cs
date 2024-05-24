@@ -3,6 +3,7 @@ using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.MainMenu;
 using Guna.UI2.WinForms;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace ChatAppDesktopUI.Login
 {
@@ -117,7 +118,12 @@ namespace ChatAppDesktopUI.Login
             string url = "https://github.com/dev-khaled-yousef";
 
             // Open the URL in the default web browser
-            System.Diagnostics.Process.Start(url);
+            var psi = new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
         }
     }
 }

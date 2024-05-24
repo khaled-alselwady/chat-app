@@ -197,7 +197,6 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.White;
-            pictureBox7.Image = ChatAppDesktopUI.Properties.Resources.password_64;
             pictureBox7.Location = new Point(19, 111);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(34, 35);
@@ -208,7 +207,6 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
-            pictureBox2.Image = ChatAppDesktopUI.Properties.Resources.username_64;
             pictureBox2.Location = new Point(19, 34);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(35, 43);
@@ -317,7 +315,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = ChatAppDesktopUI.Properties.Resources.login_image;
+            pictureBox1.Image = Properties.Resources.login_image1;
             pictureBox1.Location = new Point(12, 33);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(309, 218);

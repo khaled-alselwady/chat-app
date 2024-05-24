@@ -97,7 +97,7 @@
             // 
             pbUserProfile.BackColor = Color.Transparent;
             pbUserProfile.Cursor = Cursors.Hand;
-            pbUserProfile.Image = ChatAppDesktopUI.Properties.Resources.default_male;
+            pbUserProfile.Image = Properties.Resources.default_male;
             pbUserProfile.ImageRotate = 0F;
             pbUserProfile.Location = new Point(233, 12);
             pbUserProfile.Name = "pbUserProfile";
@@ -113,7 +113,7 @@
             // 
             btnAddNewContent.BackColor = Color.Transparent;
             btnAddNewContent.CheckedState.FillColor = Color.Transparent;
-            btnAddNewContent.CheckedState.Image = ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
+            btnAddNewContent.CheckedState.Image = Properties.Resources.add_content_blue_64;
             btnAddNewContent.Cursor = Cursors.Hand;
             btnAddNewContent.DisabledState.BorderColor = Color.DarkGray;
             btnAddNewContent.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -123,8 +123,8 @@
             btnAddNewContent.Font = new Font("Segoe UI", 9F);
             btnAddNewContent.ForeColor = Color.White;
             btnAddNewContent.HoverState.FillColor = Color.Transparent;
-            btnAddNewContent.HoverState.Image = ChatAppDesktopUI.Properties.Resources.add_content_blue_64;
-            btnAddNewContent.Image = ChatAppDesktopUI.Properties.Resources.add_content_gray_64;
+            btnAddNewContent.HoverState.Image = Properties.Resources.add_content_blue_64;
+            btnAddNewContent.Image = Properties.Resources.add_content_gray_64;
             btnAddNewContent.ImageSize = new Size(50, 50);
             btnAddNewContent.Location = new Point(121, 12);
             btnAddNewContent.Name = "btnAddNewContent";
@@ -139,7 +139,7 @@
             // 
             btnLogOut.BackColor = Color.Transparent;
             btnLogOut.CheckedState.FillColor = Color.Transparent;
-            btnLogOut.CheckedState.Image = ChatAppDesktopUI.Properties.Resources.log_out_blue_64;
+            btnLogOut.CheckedState.Image = Properties.Resources.log_out_blue_64;
             btnLogOut.Cursor = Cursors.Hand;
             btnLogOut.DisabledState.BorderColor = Color.DarkGray;
             btnLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -149,8 +149,8 @@
             btnLogOut.Font = new Font("Segoe UI", 9F);
             btnLogOut.ForeColor = Color.White;
             btnLogOut.HoverState.FillColor = Color.Transparent;
-            btnLogOut.HoverState.Image = ChatAppDesktopUI.Properties.Resources.log_out_blue_64;
-            btnLogOut.Image = ChatAppDesktopUI.Properties.Resources.log_out_gray_64;
+            btnLogOut.HoverState.Image = Properties.Resources.log_out_blue_64;
+            btnLogOut.Image = Properties.Resources.log_out_gray_64;
             btnLogOut.ImageSize = new Size(50, 50);
             btnLogOut.Location = new Point(9, 12);
             btnLogOut.Name = "btnLogOut";
@@ -229,7 +229,7 @@
             // 
             // panelMassages
             // 
-            panelMassages.BackgroundImage = ChatAppDesktopUI.Properties.Resources.chat_background2;
+            panelMassages.BackgroundImage = Properties.Resources.chat_background;
             panelMassages.Controls.Add(panelNoSelectedMessageText);
             panelMassages.Dock = DockStyle.Fill;
             panelMassages.Location = new Point(317, 0);

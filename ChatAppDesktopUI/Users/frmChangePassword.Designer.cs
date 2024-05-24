@@ -44,7 +44,6 @@
             lblTitle = new Label();
             btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             btnClose = new Guna.UI2.WinForms.Guna2GradientButton();
-            ucUserCard1 = new UserControls.ucUserCard();
             gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
             txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +55,7 @@
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             errorProvider1 = new ErrorProvider(components);
+            ucUserCard2 = new UserControls.ucUserCard();
             gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -88,7 +88,7 @@
             btnSave.FillColor2 = Color.FromArgb(41, 58, 76);
             btnSave.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
-            btnSave.Image = ChatAppDesktopUI.Properties.Resources.save;
+            btnSave.Image = Properties.Resources.save;
             btnSave.ImageAlign = HorizontalAlignment.Left;
             btnSave.ImageSize = new Size(30, 30);
             btnSave.Location = new Point(590, 597);
@@ -114,7 +114,7 @@
             btnClose.FillColor2 = Color.FromArgb(41, 58, 76);
             btnClose.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.ForeColor = Color.White;
-            btnClose.Image = ChatAppDesktopUI.Properties.Resources.close_48;
+            btnClose.Image = Properties.Resources.close_48;
             btnClose.ImageAlign = HorizontalAlignment.Left;
             btnClose.ImageSize = new Size(30, 30);
             btnClose.Location = new Point(429, 597);
@@ -125,15 +125,6 @@
             btnClose.TabIndex = 231;
             btnClose.Text = "Close";
             btnClose.Click += btnClose_Click;
-            // 
-            // ucUserCard1
-            // 
-            ucUserCard1.BackColor = Color.White;
-            ucUserCard1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ucUserCard1.Location = new Point(12, 96);
-            ucUserCard1.Name = "ucUserCard1";
-            ucUserCard1.Size = new Size(726, 237);
-            ucUserCard1.TabIndex = 233;
             // 
             // gbFilter
             // 
@@ -253,7 +244,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = ChatAppDesktopUI.Properties.Resources.password_user;
+            pictureBox2.Image = Properties.Resources.password_64;
             pictureBox2.Location = new Point(173, 62);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(31, 26);
@@ -285,7 +276,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = ChatAppDesktopUI.Properties.Resources.confirm_password_user;
+            pictureBox1.Image = Properties.Resources.confirm_password_user;
             pictureBox1.Location = new Point(173, 154);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(31, 26);
@@ -295,7 +286,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = ChatAppDesktopUI.Properties.Resources.password_user;
+            pictureBox3.Image = Properties.Resources.password_64;
             pictureBox3.Location = new Point(173, 108);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(31, 26);
@@ -307,6 +298,15 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // ucUserCard2
+            // 
+            ucUserCard2.BackColor = Color.White;
+            ucUserCard2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ucUserCard2.Location = new Point(12, 87);
+            ucUserCard2.Name = "ucUserCard2";
+            ucUserCard2.Size = new Size(726, 237);
+            ucUserCard2.TabIndex = 235;
+            // 
             // frmChangePassword
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -314,8 +314,8 @@
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(749, 647);
+            Controls.Add(ucUserCard2);
             Controls.Add(gbFilter);
-            Controls.Add(ucUserCard1);
             Controls.Add(btnSave);
             Controls.Add(btnClose);
             Controls.Add(lblTitle);
@@ -353,5 +353,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private UserControls.ucUserCard ucUserCard2;
     }
 }

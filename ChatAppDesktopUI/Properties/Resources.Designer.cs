@@ -93,29 +93,9 @@ namespace ChatAppDesktopUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chat {
-            get {
-                object obj = ResourceManager.GetObject("chat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap chat_background {
             get {
                 object obj = ResourceManager.GetObject("chat-background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap chat_background2 {
-            get {
-                object obj = ResourceManager.GetObject("chat-background2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +193,9 @@ namespace ChatAppDesktopUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_image {
+        internal static System.Drawing.Bitmap login_image1 {
             get {
-                object obj = ResourceManager.GetObject("login-image", resourceCulture);
+                object obj = ResourceManager.GetObject("login-image1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,26 +223,6 @@ namespace ChatAppDesktopUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap password_user {
-            get {
-                object obj = ResourceManager.GetObject("password-user", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap profile_50 {
-            get {
-                object obj = ResourceManager.GetObject("profile-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
@@ -276,16 +236,6 @@ namespace ChatAppDesktopUI.Properties {
         internal static System.Drawing.Bitmap send_message {
             get {
                 object obj = ResourceManager.GetObject("send-message", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap username_64 {
-            get {
-                object obj = ResourceManager.GetObject("username-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
