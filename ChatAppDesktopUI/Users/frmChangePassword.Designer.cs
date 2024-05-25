@@ -302,10 +302,10 @@
             // 
             ucUserCard2.BackColor = Color.White;
             ucUserCard2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ucUserCard2.Location = new Point(12, 87);
+            ucUserCard2.Location = new Point(12, 95);
             ucUserCard2.Name = "ucUserCard2";
             ucUserCard2.Size = new Size(726, 237);
-            ucUserCard2.TabIndex = 235;
+            ucUserCard2.TabIndex = 214;
             // 
             // frmChangePassword
             // 
@@ -341,7 +341,6 @@
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private Guna.UI2.WinForms.Guna2GradientButton btnClose;
-        private UserControls.ucUserCard ucUserCard1;
         private Guna.UI2.WinForms.Guna2GroupBox gbFilter;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;

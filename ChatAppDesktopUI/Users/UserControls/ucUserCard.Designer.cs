@@ -78,7 +78,7 @@
             llEditUserInfo.AutoSize = true;
             llEditUserInfo.Enabled = false;
             llEditUserInfo.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            llEditUserInfo.Location = new Point(525, 48);
+            llEditUserInfo.Location = new Point(568, 48);
             llEditUserInfo.Name = "llEditUserInfo";
             llEditUserInfo.Size = new Size(128, 25);
             llEditUserInfo.TabIndex = 179;
@@ -90,7 +90,7 @@
             // 
             pbUserImage.BorderStyle = BorderStyle.FixedSingle;
             pbUserImage.Image = Properties.Resources.default_male;
-            pbUserImage.Location = new Point(511, 85);
+            pbUserImage.Location = new Point(553, 85);
             pbUserImage.Name = "pbUserImage";
             pbUserImage.Size = new Size(156, 138);
             pbUserImage.SizeMode = PictureBoxSizeMode.Zoom;
@@ -103,7 +103,7 @@
             lblBio.ForeColor = Color.Black;
             lblBio.Location = new Point(148, 170);
             lblBio.Name = "lblBio";
-            lblBio.Size = new Size(305, 52);
+            lblBio.Size = new Size(379, 52);
             lblBio.TabIndex = 177;
             lblBio.Text = "[????]";
             // 

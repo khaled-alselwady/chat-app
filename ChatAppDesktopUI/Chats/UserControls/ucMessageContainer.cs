@@ -58,7 +58,7 @@ namespace ChatAppDesktopUI.Chats.UserControls
 
         private void btnContactInfo_Click(object sender, System.EventArgs e)
         {
-            frmShowUserInfo showRecipientInfo = new frmShowUserInfo(_recipientID);
+            frmShowUserInfo showRecipientInfo = new frmShowUserInfo(_recipientID, false);
             showRecipientInfo.ShowDialog();
 
             // refresh

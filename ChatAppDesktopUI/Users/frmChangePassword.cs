@@ -61,7 +61,7 @@ namespace ChatAppDesktopUI.Users
 
             }
 
-            ucUserCard1.LoadUserInfo(_userID);
+            ucUserCard2.LoadUserInfo(_userID);
         }
 
         private void txtCurrentPassword_Validating(object sender, System.ComponentModel.CancelEventArgs e)

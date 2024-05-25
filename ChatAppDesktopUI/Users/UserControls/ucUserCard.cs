@@ -55,7 +55,7 @@ namespace ChatAppDesktopUI.Users.UserControls
             llEditUserInfo.Enabled = false;
         }
 
-        public void LoadUserInfo(int? UserID)
+        public void LoadUserInfo(int? UserID, bool allowEditInfo = true)
         {
             _userID = UserID;
 
@@ -80,6 +80,8 @@ namespace ChatAppDesktopUI.Users.UserControls
             }
 
             _FillUserData();
+
+            llEditUserInfo.Visible = allowEditInfo;
         }
 
         private void llEditUserInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
