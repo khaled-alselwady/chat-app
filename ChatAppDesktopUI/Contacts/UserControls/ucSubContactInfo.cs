@@ -1,7 +1,4 @@
 ﻿using ChatAppDesktopUI.GlobalClasses;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace ChatAppDesktopUI.Contacts.UserControls
 {
@@ -18,21 +15,21 @@ namespace ChatAppDesktopUI.Contacts.UserControls
             set => _contactName = lblContactName.Text = value;
         }
 
-        private string _lastMessage;
-        public string LastMessage
+        private string? _lastMessage;
+        public string? LastMessage
         {
             get => _lastMessage;
             set => _lastMessage = lblLastMessage.Text = value;
         }
 
-        private DateTime _timeOfLastMessage;
-        public DateTime TimeOfLastMessage
+        private DateTime? _timeOfLastMessage;
+        public DateTime? TimeOfLastMessage
         {
             get => _timeOfLastMessage;
             set
             {
                 _timeOfLastMessage = value;
-                lblDateOfTheLastMessage.Text = _timeOfLastMessage.TimeOfDay.ToString("mm/:ss");
+                lblDateOfTheLastMessage.Text = _timeOfLastMessage?.ToString("hh\\:mm");
             }
         }
 

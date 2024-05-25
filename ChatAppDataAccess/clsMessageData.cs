@@ -20,7 +20,7 @@ namespace ChatAppDataAccess
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@MessageID", (object)messageID ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@MessageID", messageID);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -31,6 +31,54 @@ namespace ChatAppDataAccess
 
                                 senderID = (reader["SenderID"] != DBNull.Value) ? (int?)reader["SenderID"] : null;
                                 recipientID = (reader["RecipientID"] != DBNull.Value) ? (int?)reader["RecipientID"] : null;
+                                messageContent = (string)reader["MessageContent"];
+                                messageDate = (DateTime)reader["MessageDate"];
+                                status = (byte)reader["Status"];
+                            }
+                            else
+                            {
+                                // The record was not found
+                                isFound = false;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+                clsDataAccessHelper.HandleException(ex);
+            }
+
+            return isFound;
+        }
+
+        public static bool GetLastMessageInChat(int? senderID, int? recipientID, ref int? messageID,
+            ref string messageContent, ref DateTime messageDate, ref byte status)
+        {
+            bool isFound = false;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("SP_GetLastMessageInChat", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@SenderID", senderID);
+                        command.Parameters.AddWithValue("@RecipientID", recipientID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // The record was found
+                                isFound = true;
+
+                                messageID = (reader["MessageID"] != DBNull.Value) ? (int?)reader["MessageID"] : null;
                                 messageContent = (string)reader["MessageContent"];
                                 messageDate = (DateTime)reader["MessageDate"];
                                 status = (byte)reader["Status"];

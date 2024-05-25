@@ -128,6 +128,21 @@ namespace ChatAppBusiness
                              : null;
         }
 
+        public static clsMessage? FindLastMessage(int? senderID, int? recipientID)
+        {
+            int? messageID = null;
+            string messageContent = string.Empty;
+            DateTime messageDate = DateTime.Now;
+            byte status = 0;
+
+            bool isFound = clsMessageData.GetLastMessageInChat(senderID, recipientID, ref messageID,
+                ref messageContent, ref messageDate, ref status);
+
+            return (isFound) ? (new clsMessage(messageID, senderID, recipientID,
+                                messageContent, messageDate, (enStatus)status))
+                             : null;
+        }
+
         public static bool Delete(int? messageID)
         => clsMessageData.Delete(messageID);
 

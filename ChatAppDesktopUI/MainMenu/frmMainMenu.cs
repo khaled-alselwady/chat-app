@@ -52,12 +52,19 @@ namespace ChatAppDesktopUI.MainMenu
             userContact.Save();
         }
 
-        private ucSubContactInfo _FillSubContactInfo(clsUser user)
+        private clsMessage? _GetLastMessageInChat(int? senderID, int? recipientID)
+            => clsMessage.FindLastMessage(senderID, recipientID);
+
+        private ucSubContactInfo _CreateSubContactInfo(clsUser user)
         {
+            clsMessage? lastMessage = _GetLastMessageInChat(clsGlobal.CurrentUser?.UserID, user.UserID);
+
             ucSubContactInfo subContactInfo = new ucSubContactInfo();
             subContactInfo.ContactID = user.UserID;
             subContactInfo.ContactName = user.Username;
             subContactInfo.ImagePath = user.ImagePath;
+            subContactInfo.LastMessage = lastMessage?.MessageContent;
+            subContactInfo.TimeOfLastMessage = lastMessage?.MessageDate;
             subContactInfo.ContactIDBack += _ShowChat;
 
             return subContactInfo;
@@ -83,7 +90,7 @@ namespace ChatAppDesktopUI.MainMenu
 
             _SaveUserContactToDatabase(user.UserID);
 
-            ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
+            ucSubContactInfo subContactInfo = _CreateSubContactInfo(user);
             _AddContactInfoToTheChatsPanel(subContactInfo);
         }
 
@@ -92,6 +99,20 @@ namespace ChatAppDesktopUI.MainMenu
 
         private bool _HasContacts(DataTable dtContactsOfUser)
             => (dtContactsOfUser.Rows.Count > 0);
+
+        private void _PerformShowingContactsOfCurrentUser(DataTable dtContactsOfUser)
+        {
+            foreach (DataRow row in dtContactsOfUser.Rows)
+            {
+                clsUser user = _GetUserInfoByUsername(row["Username"].ToString());
+
+                if (!_IsUserNull(user))
+                {
+                    ucSubContactInfo subContactInfo = _CreateSubContactInfo(user);
+                    _AddContactInfoToTheChatsPanel(subContactInfo);
+                }
+            }
+        }
 
         private void _ShowContactsOfCurrentUser()
         {
@@ -102,16 +123,7 @@ namespace ChatAppDesktopUI.MainMenu
                 return;
             }
 
-            foreach (DataRow row in dtContactsOfUser.Rows)
-            {
-                clsUser user = _GetUserInfoByUsername(row["Username"].ToString());
-
-                if (!_IsUserNull(user))
-                {
-                    ucSubContactInfo subContactInfo = _FillSubContactInfo(user);
-                    _AddContactInfoToTheChatsPanel(subContactInfo);
-                }
-            }
+            _PerformShowingContactsOfCurrentUser(dtContactsOfUser);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
