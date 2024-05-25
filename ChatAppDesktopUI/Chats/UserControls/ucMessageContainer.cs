@@ -1,6 +1,7 @@
 ﻿using ChatAppBusiness;
 using ChatAppDesktopUI.GlobalClasses;
 using ChatAppDesktopUI.Users;
+using System.Data;
 
 namespace ChatAppDesktopUI.Chats.UserControls
 {
@@ -11,6 +12,10 @@ namespace ChatAppDesktopUI.Chats.UserControls
 
         private int? _recipientID = null;
         private clsUser _recipient = null;
+
+        private const byte _HeightBetweenMessages = 50;
+        private const int _LeftPadding = 10;
+        private const int _RightPadding = 700;
 
         public ucMessageContainer()
         {
@@ -33,27 +38,87 @@ namespace ChatAppDesktopUI.Chats.UserControls
             message.Save();
         }
 
-        private void AddMessage(string message)
+        private static ucMessage _CreateMessage(string message, DateTime messageTime)
         {
-            var chatMessage = new ucMessage
+            return new ucMessage
             {
                 MessageContent = message,
-                MessageTime = DateTime.Now,
+                MessageTime = messageTime,
             };
+        }
 
+        private void _AddMessageToThePanel(ucMessage chatMessage)
+        {
             ucMessage.WidthOfContainer = panelMessageContainer.Width - 20;
 
-            // Add the control to a panel
             panelMessageContainer.Controls.Add(chatMessage);
+        }
 
-            // Position the new control appropriately
+        private void _PositionMessageControl(ucMessage chatMessage, bool isSentByUser)
+        {
+            // Determine the top position (Height between messages)
             chatMessage.Top = panelMessageContainer.Controls.Count > 1
-                ? panelMessageContainer.Controls[panelMessageContainer.Controls.Count - 2].Bottom + 10
-                : 10;
+                ? panelMessageContainer.Controls[panelMessageContainer.Controls.Count - 2].Bottom + _HeightBetweenMessages
+                : _HeightBetweenMessages;
+
+            // Adjust the alignment based on the sender
+            if (isSentByUser)
+            {
+                // Align to the left
+                chatMessage.Left = _LeftPadding;
+            }
+            else
+            {
+                // Align to the right
+                chatMessage.Left = _RightPadding;
+            }
+        }
+
+        private void _AddMessage(string message, DateTime messageTime, bool isSentByUser)
+        {
+            ucMessage chatMessage = _CreateMessage(message, messageTime);
+
+            _AddMessageToThePanel(chatMessage);
+
+            _PositionMessageControl(chatMessage, isSentByUser);
 
             // Ensure the panel refreshes its layout
             panelMessageContainer.PerformLayout();
             panelMessageContainer.Invalidate();
+        }
+
+        private static bool _IsChatEmpty(DataTable dtMessagesInAChat)
+            => dtMessagesInAChat.Rows.Count <= 0;
+
+        private void _PerformShowMessagesInAChat(DataTable dtMessagesInAChat)
+        {
+            if (dtMessagesInAChat is null)
+            {
+                return;
+            }
+
+            foreach (DataRow row in dtMessagesInAChat.Rows)
+            {
+                bool isSentByUser = Convert.ToInt32(row["SenderID"]) == _senderID;
+
+                _AddMessage
+                    (Convert.ToString(row["MessageContent"]),
+                     Convert.ToDateTime(row["MessageDate"]),
+                     isSentByUser
+                    );
+            }
+        }
+
+        private void _ShowMessagesInAChat()
+        {
+            DataTable dtMessagesInAChat = clsMessage.AllMessagesInAChat(_senderID, _recipientID);
+
+            if (dtMessagesInAChat is null || _IsChatEmpty(dtMessagesInAChat))
+            {
+                return;
+            }
+
+            _PerformShowMessagesInAChat(dtMessagesInAChat);
         }
 
         private void btnContactInfo_Click(object sender, System.EventArgs e)
@@ -97,6 +162,8 @@ namespace ChatAppDesktopUI.Chats.UserControls
             }
 
             _ShowRecipientInfoInHeader();
+
+            _ShowMessagesInAChat();
         }
 
         private void btnDeleteContact_Click(object sender, System.EventArgs e)
@@ -113,7 +180,7 @@ namespace ChatAppDesktopUI.Chats.UserControls
         {
             if (!string.IsNullOrWhiteSpace(txtMessage.Text))
             {
-                AddMessage(txtMessage.Text);
+                _AddMessage(txtMessage.Text, DateTime.Now, true);
 
                 _SaveMessageToDatabase();
 

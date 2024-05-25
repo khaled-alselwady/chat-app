@@ -180,7 +180,7 @@ namespace ChatAppDesktopUI.GlobalClasses
             }
         }
 
-        public static void ShowUserImageInPictureBox(string path, Guna2CirclePictureBox pb)
+        public static void ShowUserImageInPictureBox(string? path, Guna2CirclePictureBox pb)
         {
             if (File.Exists(path))
             {

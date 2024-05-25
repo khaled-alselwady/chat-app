@@ -134,5 +134,9 @@ namespace ChatAppDataAccess
 
         public static DataTable All()
         => clsDataAccessHelper.All("SP_GetAllMessages");
+
+        public static DataTable AllMessagesInAChat(int? senderID, int? recipientID)
+            => clsDataAccessHelper
+                .All("SP_GetMessagesInChat", "SenderID", senderID, "RecipientID", recipientID);
     }
 }

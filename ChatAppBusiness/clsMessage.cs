@@ -112,7 +112,7 @@ namespace ChatAppBusiness
             return false;
         }
 
-        public static clsMessage Find(int? messageID)
+        public static clsMessage? Find(int? messageID)
         {
             int? senderID = null;
             int? recipientID = null;
@@ -136,5 +136,8 @@ namespace ChatAppBusiness
 
         public static DataTable All()
         => clsMessageData.All();
+
+        public static DataTable AllMessagesInAChat(int? senderID, int? recipientID)
+            => clsMessageData.AllMessagesInAChat(senderID, recipientID);
     }
 }

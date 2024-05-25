@@ -235,6 +235,7 @@
             // 
             // panelMessageContainer
             // 
+            panelMessageContainer.AutoScroll = true;
             panelMessageContainer.BackColor = Color.Transparent;
             panelMessageContainer.BackgroundImage = Properties.Resources.chat_background;
             panelMessageContainer.Dock = DockStyle.Fill;
